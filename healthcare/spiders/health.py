@@ -8,6 +8,9 @@ import json
 import sys
 import json
 from healthcare.items import HealthcareItem
+reload(sys)
+sys.path.append("..")
+sys.setdefaultencoding('utf-8')
 import sqlite3
 def dbconn():
 	conn=sqlite3.connect('health.sqlite3')
