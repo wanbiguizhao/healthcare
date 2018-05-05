@@ -26,7 +26,7 @@ class HealthSpider(scrapy.Spider):
 		#print self.start_urls[0]
 		scrapy.Request(url=self.start_urls[0],callback=self.startParse)
 		print self.count
-		while self.nextpage*self.size<200:
+		while self.nextpage*self.size<40000:
 
 			url="https://www.cn-healthcare.com/api/article/articlelist?data={%22start%22:%22"+str(self.nextpage)+"%22,%22size%22:%22"+str(self.size)+"%22,%22arctype%22:%220%22}"
 			self.nextpage=self.nextpage+1
